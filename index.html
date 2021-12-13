@@ -7,27 +7,45 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | NFT preview card component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
 
-  Equilibrium #3429
-
-  Our Equilibrium collection promotes balance and calm.
-
-  0.041 ETH
-  3 days left
-  
-  Creation of Jules Wyvern
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="container">
+    <div class="card">
+      <img class="card__image" src="./images/image-equilibrium.jpg" alt="equilibrium image">
+      <div class="card__body">
+        <h3 class="card__title font-weight-semi text-white">Equilibrium #3429</h3>
+        <p class="card__description font-weight-light">Our Equilibrium collection promotes balance and calm.</p>
+        <div class="flex  eth">
+          <div class="flex__1 flex">
+            <img class="card__icons" src="./images/icon-ethereum.svg" alt="ethereum icon">
+            <span class="text-secondary">0.041 ETH</span>
+          </div>
+          <div class="flex__2 flex">
+            <img class="card__icons" src="./images/icon-clock.svg" alt="clock icon">
+            <span class="text-primary"> 3 days left</span>
+          </div>
+        </div>
+        <div class="flex creation">
+          <img src="./images/image-avatar.png" alt="avatar image">
+          <p class="text-primary"> Creation of <span class="text-white">Jules Wyvern</span> </p>
+        </div>
+      </div>
+    </div>
   </div>
+  
+
+  
+
+  
+ 
+  
+ 
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Roland Jethro Suyom</a>.
+  </div> -->
 </body>
 </html>
