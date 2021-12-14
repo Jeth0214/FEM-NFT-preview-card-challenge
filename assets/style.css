@@ -36,16 +36,16 @@ body {
     font-family: var(--font-outfit);
     background-color: var(--clr-main-bg);
     min-height: 100vh;
-    overflow: hidden;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
 }
 
 a,
 a:active {
     text-decoration: none;
-
+    color: var(--clr-white);
 }
 
 /* image */
@@ -76,8 +76,8 @@ img {
 
 .container {
     margin:  auto;
-    width: min(90%, 23.25rem);
-    padding: 1.5rem;
+    width: min(90%, 25rem);
+    padding: 1rem 1.8rem 2.5rem;
     border-radius: 15px;
     background-color: hsl(217deg 59% 12%);
 }
@@ -85,26 +85,80 @@ img {
 
 /* components */
 .card {
+    position: relative;
     background-color: var(--clr-card-bg);
     padding: 1.2em;
     border-radius: 15px;
-    box-shadow: 10px 18px hsl(217deg 54% 11%), -10px 18px hsl(217deg 54% 11%);
+    box-shadow: 15px 25px hsl(217deg 54% 11%), -15px 25px hsl(217deg 54% 11%);
 }
 
-.card img {
+.card .card__image {
     border-radius: 15px;
+    opacity: 1;
+    display: block;
+    height: auto;
+    transition: all .5s ease;
+    cursor: pointer;
+    backface-visibility: hidden;
 }
+
+.card__header {
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+}
+
+.card__image--overlay {
+    position: absolute;
+    border-radius: 15px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: var(--clr-secondary);
+  }
+
+  .card__image--icon {
+    color: white;
+    opacity: 0;
+    z-index: 100;
+    font-size: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  
+ .card__header:hover .card__image--overlay {
+    opacity: .5;
+  } 
+ .card__header:hover .card__image--icon {
+    opacity: 1;
+  } 
 
 .card__title {
     font-weight: var(--fw-semi-bold);
-    margin: .7rem 0;
+    margin: .9rem 0;
     font-size: 1.4rem;
+}
+
+
+
+.card__title a:hover,  .creation__name:hover{
+    color: var(--clr-secondary);
 }
 
 .card__description {
     font-weight: var(--fw-light);
     color: var(--clr-primary);
-    margin: .7rem 0;
+    margin: 1rem 0;
     font-size: 18px;
 }
 
@@ -118,7 +172,7 @@ img {
 }
 
 .creation {
-    margin-top: 0.7rem;
+    margin-top: 0.8rem;
     justify-content: unset;
     font-weight: var(--fw-light);
 }
