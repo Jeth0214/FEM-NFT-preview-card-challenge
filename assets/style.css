@@ -35,6 +35,9 @@ body {
     font-family: var(--font-outfit);
     background-color: var(--clr-main-bg);
     min-height: 100vh;
+    display: grid;
+    justify-items: center;
+    place-content: center;
 }
 
 a,
@@ -70,8 +73,7 @@ img {
 }
 
 .container {
-    margin: 7rem auto 0;
-    width: min(90%, 25rem);
+    max-width: 25rem;
     padding: 1rem 1.8rem 2.5rem;
     border-radius: 15px;
     background-color: rgba(13, 26, 49, 0.5);
@@ -123,7 +125,6 @@ img {
     z-index: 100;
     font-size: 100px;
     position: absolute;
-    width: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
